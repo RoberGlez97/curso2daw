@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: black;
+            color: white;
+            font-size: 31px;
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+       var nombre1= prompt("Introduce Tu nombre");
+       var edad1= prompt("Introduce tu edad");
+       var nombre2= prompt("Introduce Tu nombre");
+       var edad2= prompt("Introduce tu edad");
+       var nombre3= prompt("Introduce Tu nombre");
+       var edad3= prompt("Introduce tu edad");
+
+
+       if(edad1>edad2&& edad1 >edad3){
+           document.write(nombre1 +" es el  mayor.");
+       }
+       else if(edad2>edad1&& edad2>edad3){
+        document.write(nombre2 +" es el  mayor.");
+       }
+       else{
+           document.write(nombre3 +" es el mayor.");
+       }
+    </script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        background-color: black;
+        color: white;
+        font-size: 31px;
+    }
+</style>
+<body>
+    <script>
+        var numero=500; 
+    
+    
+
+        for(var i=1; i<=numero;i++){ //for que recorre del numero 1 al numero 500.
+            if (i%4==0&& i%9==0){ //SI EL i(NUMERO) EL RESTO ENTRE 4 Y 9 ES 0, ES MULTIPLO DE 4 Y 9.
+                document.write(i + " MULTIPLO DE 4 Y DE 9 " + "<br>");
+            }
+            
+            else if(i%4==0){ //SI EL i(NUMERO) EL RESTO ENTRE 4  ES 0, ES MULTIPLO DE 4.
+                document.write(i + " MULTIPLO DE 4 " + "<br>");
+                
+            }
+            else if (i%9==0){//SI EL i(NUMERO) EL RESTO ENTRE 9  ES 0, ES MULTIPLO DE 9.
+                document.write(i + " MULTIPLO DE 9 " + "<br>");
+            }
+
+            else{ //Si no es multiplo de 4 y 9 o de 4 o 9, imprime por pantalla el numero
+                document.write(i + "<br> ");
+            }
+
+            if(i%5==0){ //Si el numero entre cinco, el resto es 0, el numero es multiplo de 5, entonces imprimirá una línea. (cada 5 números, una línea vertical)
+                document.write("---------------------- <br>")
+            }
+            
+        }
+    
+    </script>
+</body>
+</html>
