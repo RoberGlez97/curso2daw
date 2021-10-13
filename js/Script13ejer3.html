@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: black;
+            color: white;
+            font-size: 31px;
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+       //Crea una función que reciba 2 parámetros, precio e iva, y devuelva el precio con iva incluido. Si no recibe el iva, aplicará el 21 por ciento por defecto.
+       var precio=parseInt(prompt("Introduce el precio: "));
+       var iva= parseInt(prompt("Introduce el iva deseado, dejalo vacío si no lo sabes."));
+       var valortotal;
+       
+       function calculo(precio,iva){
+           var ivatotal= precio + (precio*iva)/100;
+           return ivatotal;
+       }
+
+       if(iva>0){
+        //document.write("El precio introducido es: "+ valor+" y el iva introducido es: "+ iva )
+        valortotal= calculo(precio,iva);
+        document.write("El precio total con iva es de " + valortotal);
+       }
+       else{
+        //document.write("El precio introducido es: "+ valor+ " y se ha puesto por defecto el 21% de iva");
+        valortotal= calculo(precio,21);
+        document.write("El precio total con iva es de " + valortotal);
+       }
+
+       //ayudado por carlos en el if 
+       
+        
+    </script>
+</body>
+</html>
