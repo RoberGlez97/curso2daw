@@ -1,0 +1,313 @@
+:root{
+ 
+  --principal:#253c56;
+  --secundario:#eee5d1;
+  --terciario: #4e7c97;
+  --letras:#172535;
+  --botones:#ffffff;
+  
+}
+
+.carousel-control-next-icon , .carousel-control-prev-icon{
+  filter: invert(100%);
+}
+
+html{
+  font-family: 'Roboto', sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  
+ 
+
+}
+#imagentexto{
+  width: 60rem;
+  height: 40rem;
+  padding:0;
+  object-fit: contain;
+
+  
+} 
+@media(max-width:768px)  {
+  #imagentexto{
+  background-color:var(--letras)
+  
+
+}
+
+
+  
+}
+#imagentexto2{
+  width: 35rem;
+  height: 24rem;
+  position:absolute;
+}
+
+
+
+
+.contenedordetodo{
+  width: 90%;
+  margin: 0 auto;
+  
+}
+
+.contenedordetodo .contenedorpag{
+  width: 60%;
+  margin: 0 auto;
+  margin-top: 5rem;
+  
+}
+
+
+.container{
+  display: block;
+  align-items: center;
+  width: 100%;
+  justify-content: center;
+ 
+
+}
+
+.container .pc{
+  width:130px;
+  height: 130px;
+  filter: drop-shadow(0px 0px 3px var(--terciario));
+
+}
+
+
+body{
+  background-color:var(--secundario);
+  height: 100%;
+  margin: 0;
+  padding: 0;
+ 
+  font-family: 'Raleway', sans-serif;
+}
+.cabecerafoto{
+  width: 50%;
+  height: 18rem;
+  object-fit: cover;
+  background-position: bottom;
+  align-items: center;
+
+}
+
+.contenedorpag img{
+  
+  object-fit:cover;
+  width:  8rem;
+  height: 16rem;
+}
+
+.contenedor{
+ 
+  background-color: var(--terciario);
+  color: var(--secundario);
+  border: 1px groove var(--principal);
+  display: flex;
+  margin: 0 auto;
+  border-radius: 0.6rem;
+  
+}
+
+.rober{
+  position: absolute;
+  right: -42px
+;
+  bottom: -494px
+;
+  width: 388px
+;
+  height: auto;
+  padding: 0;
+}
+
+.contenedor ul{
+  display: flex;
+  list-style: none;
+  
+}
+
+.contenedor ul li{
+  padding: 1.5rem;
+  
+  
+}
+.contenedor ul li a{
+  text-decoration: none;
+  color: var(--letras);
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.contenedor ul li:hover{
+  background-color:var(--botones);
+ 
+}
+
+
+.contenedor_principal{
+  background-color: var(--principal);
+  text-align:justify;
+  color: var(--secundario);
+  padding: 0;
+  font-weight: bold;
+  border: 1px groove var(--principal);
+  display: flex;
+  margin: 0 auto;
+  
+}
+.sobremi{
+  background-color: var(--letras);
+  width: 80%;
+  color: var(--secundario);
+  height: 18.5rem;
+  border-radius: 0.4rem;  
+  text-align: center;
+  font-weight: bold;
+  margin-top: 2rem;
+  box-shadow: 20px 16px 0px 0px var(--terciario);
+  padding: 2rem;
+  font-size:larger;
+  margin-bottom: 7.8rem;
+  
+  
+  
+}
+.sobremi h1{
+  text-align: left;
+  margin-bottom: 4rem;
+  font-size: 32px;
+}
+.sobremi h3{
+  font-size: 20px;
+  font-weight: bold;
+}
+.imagenpc{
+  width: 6rem;
+  height: 7rem;
+  object-fit: contain;
+  display:flex;
+ 
+  margin-top: 60px;
+  margin-right: 60px;
+
+  filter: drop-shadow(0px 0px 5px var(--terciario));
+  
+  
+}
+
+.curriculum{
+  display: flex;
+  width: 80%;
+  margin: 0 auto;
+  background-color: var(--letras);
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+.curriculum h1, h4{
+  color: var(--secundario);
+  display:block;
+  margin-right: 2rem;
+}
+
+
+
+.curriculum img{
+  height: 60em;
+  width: 40em;
+  object-fit: contain;
+}
+.curriculum form{
+  color: var(--letras);
+  font-weight: bold;
+}
+desc{
+  display: flex;
+  margin: 0 auto;
+  padding: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 0;
+}
+
+desc a{
+  align-items: center;
+}
+
+#descargar{
+  background-color: var(--principal) ;
+  color: var(--botones);
+  padding: 1rem;
+  text-decoration: none;
+  margin-left: 53.2rem;
+}
+.formulario{
+  max-width: 90rem;
+  margin-top: 2rem;
+  
+  
+}
+.formulario fieldset{
+  border: 1px solid rgb(255, 255, 255);
+  margin-bottom: 2rem;
+}
+.formulario legend{
+  background-color: var(--principal);
+  width: 100%;
+  text-align: center;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: bold; /*negrita*/
+  padding: 1rem;
+  margin-bottom: 4rem;
+  
+}
+.campo{
+  display: flex;
+  margin-bottom: 2rem;
+  }
+  .campo label{
+  flex-basis: 10rem; /*este label mide 10 rem y se alinea/*/
+  }
+  .campo input[type="text"],
+  .campo input[type="tel"],
+  .campo input[type="email"]{
+      flex: 1;
+      box-shadow: 0 0 10px var(--letras);
+      padding: 1rem;
+      background-color: transparent;
+      
+  }
+  fieldset{
+    padding: 4rem;
+    background-color: var(--secundario);
+  }
+
+footer{
+  background-color: var(--principal);
+  text-align: center;
+  color: var(--botones);
+  padding: 0.3rem;
+  font-weight: bold;
+  box-shadow: 0px 0px 5px var(--botones);
+  margin-top: 50px;
+  display: block;
+  width: 100%;
+  height: 40px;
+}
+.btn{
+  background-color: var(--terciario);
+  display: block;
+  color:#fff;
+  text-transform: uppercase;
+  font-weight: 600;
+  padding: 1rem;
+  transition: background-color .3s ease-out;
+  border: none;
+}
+
