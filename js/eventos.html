@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <p onclick="misterio();">payaso</p> 
+   <p onmouseleave="misterio();">payaseeo</p> 
+   <p onmouseover="misterio();">payaseeoee </p> 
+   <script>
+       var paya=5.3;
+       var iva = parseInt(prompt("dame iva",21));//el segundo parametro es el valor por defecto
+
+       /*cuidado con los array quie si lo pongo sin*/
+       var juanma=[1,2,3];
+       var lista=[ //estructura mas correcta de array bidimensional
+           [1,2,3],
+           [23,4,5],
+           [1,2,4],
+           [juanma]
+       ];
+       for(let indice in lista){
+            alert(lista[indice]);
+        }
+        for(let ind of lista){
+            alert(ind);
+        }
+        if (confirm("Estas seguro?")){
+            alert("El iva es " + iva);
+            
+        }
+        
+        else{
+            alert("vaya mierda")
+        }
+       function misterio(){
+           
+           alert(`has pulsao el boton ${paya}`);
+       }
+   </script>
+</body>
+</html>

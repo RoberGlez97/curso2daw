@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: black;
+            color: white;
+            font-size: 31px;
+        }
+
+        img{
+            height: 400px;
+            width: 700px;
+        }
+        
+       
+    </style>
+</head>
+
+<body>
+<h1><center>NO TOQUES SI NO SABES PROGRAMAR</center></h1>
+
+<div align="center" >
+<img src="/img/pc1.PNG" alt="img" onmouseenter=cambiar() onmouseleave="cambiar2() ">
+</div>
+<p align="center"></p>
+
+    
+</body>
+
+<script>
+    var frase=document.querySelector("p")
+     function cambiar(){
+        var siguiente=document.querySelector("img");
+            var imagen=siguiente.getAttribute("src");
+            
+                siguiente.setAttribute("src","/img/pc2.png")
+                
+                frase.textContent="Te lo dije puta rata!!"
+                   
+        }
+
+        function cambiar2(){
+        var siguiente=document.querySelector("img");
+            var imagen=siguiente.getAttribute("src");
+            
+                siguiente.setAttribute("src","/img/pc1.png")
+                frase.textContent=""    
+        }
+       
+</script>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .no1 ,.no2 , .no3{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+        <ul>
+        
+                <li onclick="no(1)">
+                    Hola
+                    <ul class="no1">
+                        <li>Mostro</li>
+                        <li>Mostro</li>
+                        <li>Mostro</li>
+                    </ul>
+                </li> 
+                <li onclick="no(2)">Hola
+                    <ul>
+                        <li class="no2">Mostro</li>
+                        <li class="no2">Mostro</li>
+                        <li class="no2">Mostro</li>
+                    </ul>
+
+                </li> 
+                <li onclick="no(3)">Hola
+                    <ul>
+                        <li class="no3">Mostro</li>
+                        <li class="no3">Mostro</li>
+                        <li class="no3">Mostro</li>
+                    </ul>
+
+                </li> 
+                    
+               
+        
+        </ul>
+</body>
+</html>
+
+<script>
+    var seveel1 = false;
+    var seveel2=false;
+    var seveel3=false;
+    function no(num){
+        
+        var clase;
+        if (num == 1){
+            clase = "no1";
+        }
+        else if(num==2){
+            clase="no2"
+        }
+        else{
+            clase="no3"
+        }
+
+        var dedo = document.getElementsByClassName(clase)[0];
+        var dedo1 = document.getElementsByClassName(clase)[1];
+        var dedo2 = document.getElementsByClassName(clase)[2];
+
+        if(!seveel1){
+            dedo.style.display = "block";
+            seveel1 = true;
+        }
+        else{
+            dedo.style.display = "none";
+            seveel1 = false;
+        }
+
+        if(!seveel2){
+            dedo1.style.display = "block";
+            seveel2 = true;
+        }
+        else{
+            dedo1.style.display = "none";
+            seveel2 = false;
+        }
+
+
+        if(!seveel3){
+            dedo2.style.display = "block";
+            seveel3 = true;
+        }
+        else{
+            dedo2.style.display = "none";
+            seveel3 = false;
+        }
+
+        
+        
+       
+        
+    }
+</script>

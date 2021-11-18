@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: black;
+            color: rgb(255, 255, 255);
+            font-size: 20px;
+        }
+    
+        div p{
+            display: none;
+            border: rgb(114, 114, 114) solid 2px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+    <input type="button" value="Mostrar" onclick="spoiler()">
+    <p>"Lorem ipsum dolor sit, amet consectetur adipisicing elit. Provident modi ad fuga corrupti quod consectetur ipsa pariatur sapiente et, praesentium, qui doloremque sit perspiciatis amet hic reprehenderit obcaecati expedita dolore."
+        "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Provident modi ad fuga corrupti quod consectetur ipsa pariatur sapiente et, praesentium, qui doloremque sit perspiciatis amet hic reprehenderit obcaecati expedita dolore."
+        "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Provident modi ad fuga corrupti quod consectetur ipsa pariatur sapiente et, praesentium, qui doloremque sit perspiciatis amet hic reprehenderit obcaecati expedita dolore."
+        "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Provident modi ad fuga corrupti quod consectetur ipsa pariatur sapiente et, praesentium, qui doloremque sit perspiciatis amet hic reprehenderit obcaecati expedita dolore."
+    </p>
+    </div>
+   
+
+</body>
+</html>
+
+<script>
+    function spoiler(){
+        var mostrar = document.querySelector("input")
+        var pe = document.querySelector("p");
+        var value= mostrar.getAttribute("value")
+        pe.style.display="block";
+    
+        
+        if(value=="Mostrar"){
+            mostrar.setAttribute("value","Ocultar");
+            pe.style.display="block";
+        }
+        else{
+            mostrar.setAttribute("value","Mostrar");
+            pe.style.display="none";
+        }
+        
+    }
+
+    
+        
+    
+
+</script>

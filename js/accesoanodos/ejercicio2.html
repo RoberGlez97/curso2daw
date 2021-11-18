@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+            body{
+            background-color: black;
+            color: white;
+            font-size: 31px;
+        }
+    </style>
+</head>
+<body>
+    <table border="1px" align="center" width=300px height=300px>
+        <tr>
+            <th>.</th>
+            <th>.</th>
+            <th>.</th>
+            <th>.</th>
+        </tr>
+        <tr>
+            <td>.</td>
+            <td>.</td>
+            <td>.</td>
+            <td>.</td>
+        </tr>
+        <tr>
+            <td>.</td>
+            <td>.</td>
+            <td>.</td>
+            <td>.</td>
+        </tr>
+        <tr>
+            <td>.</td>
+            <td>.</td>
+            <td>.</td>
+            <td>.</td>
+        </tr>
+    </table>
+
+    <hr>
+    <button onclick="boton1()">Valores de la tabla</button>
+    <button onclick="boton2()">Borde de la tabla</button>
+    <button onclick="boton3()">Cambiar alineacion</button>
+    
+
+
+
+    <script>
+        function boton1(){
+            var tabla= document.querySelector("table")  
+            var altura= tabla.getAttribute("width");
+            var anchura= tabla.getAttribute("height");
+            
+            alert("La altura es: "+ altura + " y la anchura es: "+ anchura);
+            var nuevaanchura=parseInt(prompt("Dime una nueva anchura: "));
+            tabla.width=nuevaanchura; //es igual que un set atribute
+            var nuevaaltura=parseInt(prompt("Dime una nueva anchura: "));
+            tabla.setAttribute("height",nuevaaltura) //daba fallo y le hice un set
+
+            alerta(altura + anchura)
+            
+            
+        }
+        function boton2(){
+            var tabla= document.querySelector("table")  
+            var borde= tabla.getAttribute("border");
+            
+            
+            alert("El tamaño del borde es : "+ borde );
+            var nuevoborde=parseInt(prompt("Dime un nuevo tamaño"));
+            tabla.border=nuevoborde; //es igual que un set atribute
+                
+        }
+
+        function boton3(){
+            var tabla= document.querySelector("table")  
+            var alineacion= tabla.getAttribute("align");
+            
+            if(alineacion=="center"){
+                tabla.setAttribute("align","right");
+            }
+
+            else if(alineacion=="right"){
+                tabla.setAttribute("align","left");
+            }
+
+            else{
+                tabla.setAttribute("align","center")
+            }
+            
+            
+            
+        
+                
+        }
+    </script>
+</body>
+</html>

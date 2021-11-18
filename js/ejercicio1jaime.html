@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            background-color: black;
+            color: white;
+            font-size: 31px;
+        }
+    </style>
+</head>
+
+<body>
+    <button onclick="calcular();">Pulsa para añadir dos numeros.</button>
+    <button onclick="jugar();">Jugar</button>
+    <button onclick="bolera();">bolera</button>
+    <script>
+       //apartado 1
+       function calcular(){
+           var primernumero=parseInt(prompt("Primer numero: "))
+           var segundonumero=parseInt(prompt("Segundo numero: "));
+
+           alert("SUMA: "+ (primernumero + segundonumero));
+           alert("RESTA: "+ (primernumero - segundonumero));
+           alert("MULTIPLICACIÓN "+ (primernumero * segundonumero));
+
+       }
+
+       //apartado 2
+       function jugar(){
+           var numparaadivinar=parseInt(Math.random()*(10-1)+1);
+           console.log("caraculo");
+           console.log(numparaadivinar);
+           var salir=false
+           
+        do{
+            var numerousuario=parseInt(prompt("Adivina un numero entre 1 y 10"));
+            if(numerousuario==numparaadivinar){
+               alert("LO HAS ADIVINADO");
+               salir=true;
+           }
+           else{
+               alert("No es el numero mostro")
+            }
+        }while(!salir)
+        
+           
+       }
+       //apartado 3
+
+       function bolera(){
+       alert("Bolera Mostri")
+       var numeropersonas= parseInt(prompt("Cuantas personas sois"));
+       var totalapagar=0;
+       var descuento75=10-(10*0.75);
+       
+
+       for(let i=1;i<=numeropersonas;i++){
+           
+           var edad=parseInt(prompt("Que edad tiene la persona numero "+ i));
+
+           if((edad>=0&&edad<=5)||edad>=65){
+               totalapagar+=1;
+           }
+           else if((edad>=6&&edad<=12)||(edad>=51&&edad<=65)){
+               totalapagar+=descuento75;
+           }
+           else{
+               totalapagar+=10;
+           }
+        
+       }
+       document.write("Bolera Mostri" +"<br>" +" -----------------------------------"+ "<br>")
+       document.write("Numero de personas: "+ numeropersonas+"<br>"+"Total a pagar: " + totalapagar);
+    }
+       
+
+        
+    </script>
+</body>
+</html>

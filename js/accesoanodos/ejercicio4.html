@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: black;
+            color: white;
+            font-size: 31px;
+        }
+        img{
+            width: 500px;
+            height: 500px;
+            
+        }
+        .boton{
+            margin-left: 100px;
+        }
+    </style>
+</head>
+
+
+<body>
+<img src="/img/acordeon.jpg" alt="acordeon">
+<hr>
+<button class="boton" onclick="boton2()">Volver</button>
+<button  class="boton" onclick="boton1()">Siguiente</button>
+
+    
+</body>
+
+<script>
+     function boton1(){
+            var siguiente=document.querySelector("img");
+            var imagen=siguiente.getAttribute("src")
+
+            if(imagen=="/img/acordeon.jpg"){
+                siguiente.setAttribute("src","/img/guitarra.png") 
+            }
+            else if(imagen=="/img/guitarra.png"){
+                siguiente.setAttribute("src","/img/tambor.png") 
+            }
+            else if(imagen=="/img/tambor.png"){
+                siguiente.setAttribute("src","/img/ukelele.jpg") 
+            }
+            else if(imagen=="/img/ukelele.jpg"){
+                siguiente.setAttribute("src","/img/violin.jpg")
+         
+            }
+
+            
+            
+            
+        }
+
+        function boton2(){
+            var siguientee=document.querySelector("img");
+            var imagenn=siguientee.getAttribute("src")
+
+            if(imagenn=="/img/violin.jpg"){
+                siguientee.setAttribute("src","/img/ukelele.jpg") 
+            }
+            else if(imagenn=="/img/ukelele.jpg"){
+                siguientee.setAttribute("src","/img/tambor.png") 
+            }
+            else if(imagenn=="/img/tambor.png"){
+                siguientee.setAttribute("src","/img/guitarra.png") 
+            }
+            else if(imagenn=="/img/guitarra.png"){
+                siguientee.setAttribute("src","/img/acordeon.jpg") 
+            }
+
+            
+            
+            
+        }
+</script>
+</html>

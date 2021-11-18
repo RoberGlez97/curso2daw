@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .agobio{
+            width:500px;
+            padding:1em;
+            border: 1px solid red;
+        }
+    </style>
+</head>
+<body>
+   <!-- CREAR  1.crear nodo del tipo deseado
+        Cada vez que pulse el boton crear, dentro de un <article> un <p></p> </article>
+    
+    2.Colocar atributos(html) necesarios(opcional)
+        EJ: Id , class, value, name, type , src , href
+
+    3. Si el nodo tiene texto : (opcional)
+        Crear el texto.
+        Engancharlo al nodo
+
+    4.Enganchar el nodo donde yo quiera
+
+
+
+    BORRAR 1.Llegar al padre del nodo a borrar
+            2. Borrar el nodo desde el padre-->
+
+    <input type="button" value="crear" onclick="crear()">
+    <input type="button" value="borrar" onclick="borrar()">
+    <article>
+        <div id="cabecera">hola</div>
+        <p>e primer parrafo</p>
+        <p>eeeeee</p>
+    </article>
+
+    <script>
+        function crear(){
+            var nuevo=document.createElement("p")//1
+            
+            nuevo.align="center";//2
+            nuevo.className="agobio";
+            
+            var texto=prompt("Mete texto churra: " ," ");//3
+            var nodotexto=document.createTextNode(texto);
+
+            nuevo.appendChild(nodotexto);//3b
+
+            var papi=document.querySelector("article")
+            papi.appendChild(nuevo)
+
+            //para insertar antes del hermano o de lo que sea
+
+            var hermano= document.getElementById("cabecera");
+            papi.insertBefore(nuevo,hermano);
+
+        }
+
+        function borrar(){
+            var papi= document.querySelector("article"); //var papi= ele.parentNode  OTRA OPCION 
+            var ele= document.getElementsByTagName("p");
+            papi.removeChild(ele[0])
+            var hijos=papi.children;//hijos de papi
+
+            for(let i=0; i<hijos.length;i++){
+                hijos[i].style.color="blue";
+                
+            }
+            while(papi.firstChild){
+                papi.remove(papi.firstChild);
+
+            }
+
+        }
+    </script>
+</body>
+</html>

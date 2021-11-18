@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .imagen{
+            position:absolute;
+            left:70px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <img src="/img/tambor.png" alt="img" class="imagen">
+        <input type="button" value="Derecha" onclick="derecha()">
+        <input type="button" value="Izquierda" onclick="izquierda()">
+    </div>
+</body>
+</html>
+
+<script>
+    function derecha(){
+        var dedo=document.getElementsByClassName("imagen");
+        var estilos=window.getComputedStyle(dedo[0]);
+        var left=estilos.getPropertyValue("left");
+        var antiguo =parseInt(left);
+        antiguo+=5;
+        dedo[0].style.left=antiguo+"px"; 
+        
+    
+        
+    }
+
+    function izquierda(){
+        var dedo=document.getElementsByClassName("imagen");
+        var estilos=window.getComputedStyle(dedo[0]);
+        var left=estilos.getPropertyValue("left");
+        var antiguo=parseInt(left);
+        antiguo-=5;
+        dedo[0].style.left=antiguo+"px"; 
+        
+    
+        
+    }
+</script>

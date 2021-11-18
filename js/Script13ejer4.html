@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: black;
+            color: white;
+            font-size: 31px;
+        }
+    </style>
+</head>
+<body>
+    <script>
+
+        function Numeros(){
+            let numero;
+            let resultado="";
+            for (let i = 0; i < 100; i++) {
+                numero=0;//Inicia el numero a 0 para entrar en el while
+
+                while(numero==0){
+                    numero=parseInt((Math.random()*1000+1));
+                    if(resultado.includes(numero)){//si el resultado ya tiene el numero, volvemos a buscar otro numero
+                        numero=0;
+                    }
+                    else{//si no lo tiene, lo añadimos.
+                        resultado+=numero+" <br> " + "<hr>";
+                        
+                    }
+                }
+                
+            }
+            document.write(resultado);
+        }
+        Numeros();
+        
+        //ANDRES me ayudó en la funcíon
+        
+    </script>
+</body>
+</html>
